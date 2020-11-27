@@ -1,0 +1,12 @@
+{
+    "name": "baronvertigovongrahamthesecondofsealand/genpass",
+    "description": "Generate passwords from memes",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Cameron Graham",
+            "email": "cam.graham@gmail.com"
+        }
+    ],
+    "require": {}
+}
