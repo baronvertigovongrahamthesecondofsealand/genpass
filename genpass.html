@@ -1,0 +1,86 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>genpass v0.1</title>
+
+    <style>
+        body {
+            text-align: center;
+        }
+        .drop-file {
+            max-width: 350px;
+            width: 100%;
+            min-height: 180px;
+            margin: 10px auto;
+            border: 1px dashed #aaa;
+            border-radius: 3px;
+            background: transparent url('img/upload.png') no-repeat center center / 110%;
+            cursor: pointer;
+            position: relative;
+        }
+        .drop-file.active {
+            background: none;
+            min-height: auto;
+        }
+        .drop-file .reset {
+            border: none;
+            background: none;
+            position: absolute;
+            top: -10px;
+            right: -30px;
+            cursor: pointer;
+        }
+        .drop-file .reset img {
+            width: 32px;
+            height: 35px;
+        }
+        .uploader {
+            display: none;
+        }
+        .alg {
+            display: block;
+            width: 100px;
+            margin: 10px auto;
+        }
+        .preview {
+            display: none;
+            max-width: 350px;
+            width: 100%;
+            margin: 0;
+        }
+        .result {
+            display: none;
+            margin: 10px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="drop-file">
+    <img class="preview" />
+    <button class="reset"><img src="img/reset.png" /></button>
+</div>
+
+<input class="uploader" type="file" />
+
+<select class="alg">
+    <option>SHA-512</option>
+    <option>SHA-256</option>
+    <option>SHA-1</option>
+</select>
+
+<div class="result">
+    <h3>Hash result</h3>
+    <span class="hash"></span>
+</div>
+
+<script src="js/sha_dev.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
